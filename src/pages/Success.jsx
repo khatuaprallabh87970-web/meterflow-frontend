@@ -14,7 +14,7 @@ export default function Success() {
         if (!amount) return; // safety check
 
         await axios.post(
-          "http://localhost:5000/api/payment/save",
+          "https://meterflow-backend-ap90.onrender.com/api/payment/save",
           { amount },
           {
             headers: { Authorization: `Bearer ${token}` },

@@ -16,7 +16,7 @@ export default function ApiPlayground() {
 
       const res = await axios({
         method,
-        url: `http://localhost:5000${url}`,
+        url: `https://meterflow-backend-ap90.onrender.com${url}`,
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",

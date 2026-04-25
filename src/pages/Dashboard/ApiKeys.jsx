@@ -7,7 +7,7 @@ export default function ApiKeys() {
   const token = localStorage.getItem("token");
 
   const fetchKeys = async () => {
-    const res = await axios.get("http://localhost:5000/api/keys", {
+    const res = await axios.get("https://meterflow-backend-ap90.onrender.com/api/keys", {
       headers: { Authorization: `Bearer ${token}` },
     });
     setKeys(res.data);
@@ -15,7 +15,7 @@ export default function ApiKeys() {
 
   const createKey = async () => {
     await axios.post(
-      "http://localhost:5000/api/keys",
+      "https://meterflow-backend-ap90.onrender.com/api/keys",
       {},
       {
         headers: { Authorization: `Bearer ${token}` },

@@ -35,7 +35,7 @@ export default function Dashboard() {
         const token = localStorage.getItem("token");
 
         const res = await axios.get(
-          "http://localhost:5000/api/usage/stats",
+          "https://meterflow-backend-ap90.onrender.com/api/usage/stats",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -49,7 +49,7 @@ export default function Dashboard() {
           alert("Billing threshold reached! Redirecting to payment...");
 
           const paymentRes = await axios.post(
-            "http://localhost:5000/api/payment/checkout",
+            "https://meterflow-backend-ap90.onrender.com/api/payment/checkout",
             { amount: res.data.totalCost },
             {
               headers: { Authorization: `Bearer ${token}` },
@@ -69,7 +69,7 @@ export default function Dashboard() {
         const token = localStorage.getItem("token");
 
         const res = await axios.get(
-          "http://localhost:5000/api/usage/analytics",
+          "https://meterflow-backend-ap90.onrender.com/api/usage/analytics",
           {
             headers: { Authorization: `Bearer ${token}` },
           }

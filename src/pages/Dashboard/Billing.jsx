@@ -14,7 +14,7 @@ export default function Billing() {
         const token = localStorage.getItem("token");
 
         const res = await axios.get(
-          "http://localhost:5000/api/usage/stats",
+          "https://meterflow-backend-ap90.onrender.com/api/usage/stats",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -36,7 +36,7 @@ export default function Billing() {
         const token = localStorage.getItem("token");
 
         const res = await axios.get(
-          "http://localhost:5000/api/payment",
+          "https://meterflow-backend-ap90.onrender.com/api/payment",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -56,7 +56,7 @@ export default function Billing() {
       const token = localStorage.getItem("token");
 
       const res = await axios.post(
-        "http://localhost:5000/api/payment/checkout",
+        "https://meterflow-backend-ap90.onrender.com/api/payment/checkout",
         { amount: stats.totalCost },
         {
           headers: { Authorization: `Bearer ${token}` },
